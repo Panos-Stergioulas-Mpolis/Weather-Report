@@ -1,20 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./search.css"
+import {FiSearch} from "react-icons/fi" 
 
 function Search() {
 
-  const [search, setSearch] = useState(null)
+  const [search, setSearch] = React.useEffect();
+    
 
   return (
-    <div className='search-bar'>
-      <input
+    <form className='search-bar'>
+        <input
+        className='in'
         type="text"
-        name="search"
-        value={search}
-        onChange={"handleSearchChange"}
-        placeholder="Search"
-      />
-    </div>
+        placeholder='Search'
+        value = {search}
+        onChange = {event => setSearch(event.target.value)}
+        />
+        <button type='submit' className='s-button'><FiSearch/></button>
+    </form>
   )
 }
 
