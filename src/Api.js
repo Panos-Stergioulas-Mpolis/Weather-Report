@@ -4,8 +4,8 @@ import Main from './components/Main/Main'
 
 function Api(props) {
 
-  const [data, setData] = React.useEffect({})
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${props.loc},uk&APPID=8846ecfd3437a6bb3da8fafa171d4f05`
+  const [data, setData] = React.useState({})
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${props.loc}&APPID=8846ecfd3437a6bb3da8fafa171d4f05`
 
   React.useEffect(() =>{
     axios.get(url)
@@ -13,8 +13,12 @@ function Api(props) {
     .catch(err => console.error(err))
   }, [])
 
+  console.log(data.coord)
+
   return (
-    <div><Main key = {data.id} {...data}/></div>
+    <Main 
+    key = {data.id} 
+    co = {data.coord}/>
   )
 }
 

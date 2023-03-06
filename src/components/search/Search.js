@@ -2,22 +2,26 @@ import React from 'react'
 import "./search.css"
 import {FiSearch} from "react-icons/fi" 
 
-function Search() {
+function Search(props) {
 
-  const [search, setSearch] = React.useEffect();
+  const [search, setSearch] = React.useState();
+
+  function chanheSearch(event){
+    setSearch(event.target.value)
+  }
     
 
   return (
-    <form className='search-bar'>
+    <div className='search-bar'>
         <input
         className='in'
         type="text"
         placeholder='Search'
         value = {search}
-        onChange = {event => setSearch(event.target.value)}
+        onChange = {chanheSearch}
         />
-        <button type='submit' className='s-button'><FiSearch/></button>
-    </form>
+        <div className='s-button' onClick={() => props.func(search)}><FiSearch/></div>
+    </div>
   )
 }
 

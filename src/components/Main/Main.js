@@ -2,7 +2,7 @@ import React from 'react'
 
 function Main(props) {
   return (
-    <div>Main</div>
+    <div>{console.log(props.co)}</div>
   )
 }
 
