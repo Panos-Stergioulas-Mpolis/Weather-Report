@@ -7,7 +7,7 @@ import Main from './components/Main/Main'
 
 function App() {
   
-  const [loc, setLoc] = React.useState("");
+  const [loc, setLoc] = React.useState("Athens");
 
   function handleClic(aString){
     setLoc(aString)

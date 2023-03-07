@@ -1,9 +1,17 @@
 import React from 'react'
 
 function Main(props) {
-  return (
-    <div>{console.log(props.co)}</div>
-  )
+  if(props.name !=="name"){
+    return (
+      <div>{props.weather[0].main}{props.name}</div>
+    )
+  }
+  else{
+    return (
+      <div></div>
+    )
+  }
+ 
 }
 
 export default Main

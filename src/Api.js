@@ -4,21 +4,25 @@ import Main from './components/Main/Main'
 
 function Api(props) {
 
-  const [data, setData] = React.useState({})
+  const [data, setData] = React.useState({
+    "name": "name"
+  })
+
+ 
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${props.loc}&APPID=8846ecfd3437a6bb3da8fafa171d4f05`
+
 
   React.useEffect(() =>{
     axios.get(url)
     .then(res => setData(res.data))
     .catch(err => console.error(err))
-  }, [])
+  }, [props.loc])
 
-  console.log(data.coord)
+  console.log(data)
 
   return (
     <Main 
-    key = {data.id} 
-    co = {data.coord}/>
+    {...data}/> 
   )
 }
 
