@@ -4,12 +4,17 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    background: url(weather_bc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
     max-width: 1080px;
     margin: 20px auto;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
 }
