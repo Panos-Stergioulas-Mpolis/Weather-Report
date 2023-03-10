@@ -9,7 +9,7 @@ function Api(props) {
   })
 
  
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${props.loc}&APPID=8846ecfd3437a6bb3da8fafa171d4f05`
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${props.loc}&units=metric&APPID=8846ecfd3437a6bb3da8fafa171d4f05`
 
 
   React.useEffect(() =>{

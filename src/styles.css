@@ -5,14 +5,12 @@
 
 body{
     font-family:'Times New Roman', Times, serif;
-    background: url(weather_bc.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(90deg, rgb(81, 81, 201), rgb(82, 53, 122) );
 }
 
 .container{
-    max-width: 1080px;
-    margin: 20px auto;
+    width: 100%;
+    margin: 40px auto;
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -3,11 +3,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: fit-content;
+    width: 40%;
 }
 
 .in{
+    width: 90%;
     border-radius: 10px;
+    border: none;
     padding: 10px 15px;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.546);
@@ -20,7 +22,7 @@
     align-items: center;
     position: absolute;
     right: 0;
-    padding-right: 10px;
+    padding-right: 5%;
     font-size: 20px;
     color: white;
 }
