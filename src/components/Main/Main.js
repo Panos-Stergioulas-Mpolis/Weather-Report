@@ -1,16 +1,19 @@
 import React from 'react'
 import "./main.css"
+import Clouds from "../../assets/Clouds.png"
+import Sun from "../../assets/Sun.png"
+import Rain from "../../assets/Rain.png"
 
 function Main(props) {
   
   if(props.name !=="name"){
     var weather = "";
     if(props.weather[0].main === "Clouds"){
-      weather = "Clouds.png"
+      weather = Clouds
     }else if(props.weather[0].main === "Clear"){
-      weather = "Sun.png"
+      weather = Sun
     }else{
-      weather = "Rain.png"
+      weather = Rain
     }
     return (
       <div className='main'>

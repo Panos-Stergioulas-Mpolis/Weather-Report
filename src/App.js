@@ -1,5 +1,5 @@
 import React from 'react'
-import "./styles.css"
+import "./assets/styles.css"
 import Search from './components/search/Search'
 import Api from './Api'
 import Main from './components/Main/Main'
