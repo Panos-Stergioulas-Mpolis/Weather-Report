@@ -1,5 +1,4 @@
 import React from 'react'
-import "./main.css"
 import Clouds from "../../assets/Clouds.png"
 import Sun from "../../assets/Sun.png"
 import Rain from "../../assets/Rain.png"
@@ -16,22 +15,22 @@ function Main(props) {
       weather = Rain
     }
     return (
-      <div className='main'>
-        <div className='loc-weath'>
+      <div className='w-[70%] text-white mx-auto'>
+        <div className='flex items-center justify-between my-0 mx-[90px]'>
         <div>
-          <h1 className='location'>{props.name}</h1>
+          <h1 className='text-[45px]'>{props.name}</h1>
         </div>
-        <div className='weather'>
-        <div className='temp'>
-          {props.main.temp} <smal className="cel">°C</smal>
+        <div className='flex items-center'>
+        <div className='text-[40px] flex pt-[15px]'>
+          {props.main.temp} <smal className="pt-[5px] text-[17px]">°C</smal>
           </div>
-          <img className='weather-img' alt="icon" src={weather}/>
+          <img className='w-[150px]' alt="icon" src={weather}/>
         </div>
         </div>
-       <div className='main-footer'>
-        <div className='info'>Feels Like <div className='info-temp'>{props.main.feels_like}<small className='inf-cel'>°C</small></div></div>
-        <div className='info'>Min Temp <div className='info-temp'>{props.main.temp_min}<small className='inf-cel'>°C</small></div></div>
-        <div className='info'>Max Temp <div className='info-temp'>{props.main.temp_max}<small className='inf-cel'>°C</small></div></div>
+       <div className='bg-bg-color rounded-[20px] w-[100%] h-[90px] my-[60px] mx-auto flex items-center justify-between text-[20px] py-[10px] px-[20px]'>
+        <div className='flex-col gap-[20px] '>Feels Like <div className='text-[22px]'>{props.main.feels_like}<small className='text-[15px] '>°C</small></div></div>
+        <div className='flex-col gap-[20px] '>Min Temp <div className='text-[22px]'>{props.main.temp_min}<small className='text-[15px] '>°C</small></div></div>
+        <div className='flex-col gap-[20px] '>Max Temp <div className='text-[22px]'>{props.main.temp_max}<small className='text-[15px] '>°C</small></div></div>
        </div>
       </div>
     )
