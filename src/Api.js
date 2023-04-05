@@ -17,9 +17,7 @@ function Api(props) {
     .then(res => setData(res.data))
     .catch(err => console.error(err))
   }, [props.loc])
-
-  console.log(data)
-
+  
   return (
     <Main 
     {...data}/> 

@@ -7,7 +7,7 @@ import Main from './components/Main/Main'
 
 function App() {
   
-  const [loc, setLoc] = React.useState("Thessaloniki");
+  const [loc, setLoc] = React.useState("London");
 
   function handleClic(aString){
     setLoc(aString)
@@ -15,7 +15,7 @@ function App() {
   
 
   return (
-    <div className=' my-[40px]  space-y-[100px] text-center'>
+    <div className='flex-col my-[40px]  text-center'>
       <Search func={handleClic}/>
       <Api loc = {loc}/>
     </div>
